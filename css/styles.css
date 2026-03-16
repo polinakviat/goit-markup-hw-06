@@ -76,7 +76,7 @@ img {
 
 .container {
     max-width: 320px;
-    padding: 0 15px 0 15px;
+    padding: 0 16px;
     margin: 0 auto;
     outline-offset: -2px;
 }
@@ -248,24 +248,56 @@ img {
     margin: 0 auto;
     background-position: center;
     padding: 72px 0;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
-    linear-gradient(rgba(46, 47, 66, 0.7)),
-    url("../images/people-office1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #2E2F42
+    background-color: #2E2F42;
+
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+            linear-gradient(rgba(46, 47, 66, 0.7)),
+            url("../images/Dark-bg-mob.png");
+}
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+.hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+            linear-gradient(rgba(46, 47, 66, 0.7)),
+            url("../images/Dark-bg-mob-@2x.png");
+  }
 }
 @media only screen and (min-width: 768px) {
   .hero-section {
     max-width: 768px;
     padding: 112px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+            linear-gradient(rgba(46, 47, 66, 0.7)),
+            url("../images/Dark-bgtab.png");}
+            
+    @media (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    .hero-section {
+                        background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+                            linear-gradient(rgba(46, 47, 66, 0.7)),
+                            url("../images/Dark-bgtab-@2x.png");
+                    }
+                }
+                
   }
-}
+
 @media only screen and (min-width: 1158px) {
     .hero-section {
         max-width: 1440px;
         padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+                linear-gradient(rgba(46, 47, 66, 0.7)),
+        url("../images/people-office1.png");
     }
+        @media (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            .hero-section {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7)),
+                    linear-gradient(rgba(46, 47, 66, 0.7)),
+                    url("../images/people-office1@2x.png");
+            }
+        }
 }
 
 .main-heading {
@@ -274,13 +306,15 @@ img {
     margin: auto;
     text-align: center;
     font-weight: 700;
-    font-size: 3.5em;
-    line-height: 1.07;
+    font-size: 2.25em;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     color: #FFFFFF;
 }
-@media only screen and (min-width: 758px) {
+@media only screen and (min-width: 768px) {
     .main-heading {
+        font-size: 3.5em;
+        line-height: 1.07;
         width: 496px;
         padding-bottom: 36px;
     }
@@ -384,11 +418,6 @@ img {
 }
 
 @media only screen and (min-width: 320px) {
-.feature-wrapper {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) {
     .feature-wrapper {
         display: none;
     }
@@ -468,10 +497,9 @@ img {
 }
 
 .team-element {
-    display: flex;
     flex-direction: column;
     padding-top: 72px;
-    gap: 24px 72px;
+    gap: 72px 24px;
 }
 @media only screen and (min-width: 768px) {
   .team-element {
@@ -479,7 +507,8 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    justify-content: center;
+    gap: 64px 24px;
   }
 }
 
@@ -624,21 +653,31 @@ img {
     row-gap: 48px;
 }
 
-.portfolio-element:hover {
-    box-shadow: 
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+@media only screen and (min-width: 1158px) {
+  .portfolio-element:hover {
+    box-shadow:
+            0 2px 1px 0 rgba(46, 47, 66, 0.08),
+            0 1px 1px 0 rgba(46, 47, 66, 0.08),
+            0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
 }
 
 .portfolio-element {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 288px;
 }
+@media only screen and (max-width: 1157.98px) {
+  .portfolio-element {
+    box-shadow:
+            0 2px 1px 0 rgba(46, 47, 66, 0.08),
+            0 1px 1px 0 rgba(46, 47, 66, 0.08),
+            0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+}
 
 @media only screen and (min-width: 768px) {
     .portfolio-element {
-        width: 356px;
+        width: calc((100% - 24px * 2) / 2);
         flex-direction: column;
     }
 }
@@ -695,7 +734,7 @@ img {
 .footer > .container {
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 72px;
 }
 @media only screen and (min-width: 768px) {
@@ -764,7 +803,13 @@ img {
 
 .footer {
     background-color: #2E2F42;
+    padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .footer {
     padding: 100px 0;
+  }
 }
 
 
@@ -779,6 +824,9 @@ img {
   }
 }
 
+.footer-block-tablet {
+
+}
 
 .footer-socials {
     position: relative;
