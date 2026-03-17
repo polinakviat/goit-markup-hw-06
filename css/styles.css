@@ -562,7 +562,7 @@ img {
     .feature-heading {
         font-weight: 500;
         font-size: 1.25em;
-        line-height: 1.5;
+        line-height: 1.2;
     }
 }
 
@@ -1124,6 +1124,17 @@ padding: 8px 16px;
     visibility: visible;
 }
 
+
+.modal-paragraph {
+    margin-bottom: 16px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+}
+
 .modal {
     position: absolute;
     top: 50%;
@@ -1147,9 +1158,9 @@ padding: 8px 16px;
   }
 }
 @media only screen and (min-width: 768px) {
-  .modal {
-      padding-top: 72px;
-  }
+    .modal {
+        padding: 72px 24px 24px 24px;
+    }
 }
 
 .modal-close {
@@ -1254,7 +1265,6 @@ padding: 8px 16px;
 @media only screen and (min-width: 768px) {
     .order-input {
         width: 360px;
-        padding-right: 336px;
     }
 }
 
